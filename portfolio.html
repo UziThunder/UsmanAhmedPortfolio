@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Usman Ahmed — Graphic Designer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+  background-color: #0f4e63; /* Old dark background */
+  color: #f6f6f7;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+    
+
+    header {
+      background: #0f4e63;
+      padding: 15px 0;
+      text-align: center;
+      border-bottom: 1px solid #752525;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-family: "Bebas Neue", sans-serif;
+      color: #e02929;
+      margin: 0;
+      font-size: 38px;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      color: #249ec7;
+      font-size: 14px;
+      margin: 4px 0 0 0;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #9aa0a6;
+      margin: 0 10px;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #e02929;
+      transition: width 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    section {
+      padding: 40px 10%;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: #fff;
+      font-family: "Montserrat", sans-serif;
+      border-left: 4px solid #e02929;
+      padding-left: 10px;
+    }
+
+    .btn {
+      background: #e02929;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff3c3c;
+      transform: scale(1.05);
+    }
+
+    /* Portfolio section */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .portfolio-item {
+      background: #111214;
+      border: 1px solid #1c1c1c;
+      border-radius: 10px;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s ease;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #0f0f0f;
+      transition: transform 0.4s ease;
+    }
+
+    .portfolio-item:hover {
+      transform: scale(1.02);
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.08);
+    }
+
+    /* More Works section (9:16 posters) */
+    .moreworks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .moreworks-item {
+      aspect-ratio: 9 / 16;
+      background: #111214;
+      border: 1px solid #1c1c1c;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s ease;
+    }
+
+    .moreworks-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #0f0f0f;
+      transition: transform 0.4s ease;
+    }
+
+    .moreworks-item:hover {
+      transform: scale(1.02);
+    }
+
+    .moreworks-item:hover img {
+      transform: scale(1.08);
+    }
+
+    footer {
+      background: #0f4e63;
+      color: #9aa0a6;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      border-top: 1px solid #1c1c1c;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Usman Ahmed</h1>
+    <p>Graphic Designer | Car & Gaming Visuals | Motion Posters</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#moreworks">More Works</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Welcome</h2>
+    <p>Hi, I’m Usman Ahmed — I design bold, cinematic visuals that make your brand and content stand out.</p>
+    <button class="btn" onclick="document.querySelector('#portfolio').scrollIntoView({behavior:'smooth'})">View My Work</button>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate graphic designer from Pakistan who specializes in car and gaming artwork. I focus on precision, creativity, and powerful visuals that catch the viewer’s eye. I work primarily in <strong>Adobe Illustrator</strong> for high-quality vector and poster designs, <strong>With over 3 years of graphic designing</strong></p>
+  </section>
+
+  <section id="portfolio">
+    <h2>My Portfolio</h2>
+    <p>Here Is Some Of My Work!</p>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="/Screenshot 2025-11-07 170033.png" alt="Car Poster">
+      </div>
+      <div class="portfolio-item">
+        <img src="/Screenshot 2025-11-07 172645.png" alt="Gaming Visual">
+      </div>
+      <div class="portfolio-item">
+        <img src="/Screenshot 2025-11-07 173149.png" alt="Logo Design">
+      </div>
+    </div>
+  </section>
+
+  <section id="moreworks">
+    <h2>More Works</h2>
+    <p>Here are a few more of my favorite 9:16 poster designs.</p>
+
+    <div class="moreworks-grid">
+      <div class="moreworks-item">
+        <img src="/Screenshot 2025-11-07 172406.png" alt="Cinematic Car Poster">
+      </div>
+      <div class="moreworks-item">
+        <img src="/Screenshot 2025-11-07 172537.png" alt="Gaming Poster">
+      </div>
+      <div class="moreworks-item">
+        <img src="/Screenshot 2025-11-07 165031.png" alt="Brand Visual">
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>What I Do</h2>
+    <ul>
+      <li>🎨 Poster Design — cinematic car and brand visuals</li>
+      <li>🖋️ Logo & Branding — clean, modern logos</li>
+      <li>📸 Thumbnail Design — bold visuals for creators</li>
+       <li>💖 Can Give You Free Sample According To Your Choice!</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Let’s Work Together!</h2>
+    <p>Contact me on:</p>
+    <p>Discord — <strong>human_waterdrinker</strong></p>
+    <p>YouTube — <a href="https://youtube.com/@uzithunder?si=sUo-PTuxo4tM6Et1" target="_blank">UziThunder</a></p>
+    <h5>NOTE: My YouTube doesn’t have all of my graphic designs yet.</h5>
+  </section>
+
+  <footer>
+    © 2025 Usman Ahmed | Designed by Usman Ahmed With 💖
+  </footer>
+
+  <script>
+    // Scroll Animation (fade/slide in)
+    const sections = document.querySelectorAll("section");
+
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const boxTop = section.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          section.classList.add("visible");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll(); // initial check
+
+    // Disable smooth scroll for navbar links
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const id = link.getAttribute("href");
+        document.querySelector(id).scrollIntoView({ behavior: "instant" });
+      });
+    });
+  </script>
+</body>
+</html>
